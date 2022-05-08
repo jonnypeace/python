@@ -20,7 +20,7 @@ def round_val(x, r):
     mod2 = mod1 % 5
 
     # checking conditions are met for rounding even
-    if re.findall("[02468]?5", q) and mod2 == 0.0:
+    if re.findall("^[02468]?5$", q) and mod2 == 0.0:
         ans = round((mod1 - 5) / 10 ** (length - (point + 1)), r)
         # this syntax works along the lines of "{:.2f}".format(val, decimal_point). .2f would be 2 decimal points
         # i.e. "{:.decimal_pointf}".format(val, decimal_point)
@@ -28,7 +28,7 @@ def round_val(x, r):
         ans = "{:.{}f}".format(ans, r)
         print("Answer is: " + ans)
         return
-    elif re.findall("[13579]?5", q) and mod2 == 0.0:
+    elif re.findall("^[13579]?5$", q) and mod2 == 0.0:
         ans = (mod1 + 5) / 10 ** (length - (point + 1))
         ans = "{:.{}f}".format(ans, r)
         print("Answer is: " + ans)
