@@ -21,7 +21,7 @@ def round_val(x, r):
 
     # checking conditions are met for rounding even
     if re.findall("^[02468]?5$", q) and mod2 == 0.0:
-        ans = round((mod1 - 5) / 10 ** (length - (point + 1)), r)
+        ans = (mod1 - 5) / 10 ** (length - (point + 1))
         # this syntax works along the lines of "{:.2f}".format(val, decimal_point). .2f would be 2 decimal points
         # i.e. "{:.decimal_pointf}".format(val, decimal_point)
         # for some more info https://mkaz.blog/code/python-string-format-cookbook/
