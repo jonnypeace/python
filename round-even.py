@@ -28,7 +28,7 @@ def round_val(x, r):
         ans = "{:.{}f}".format(ans, r)
         print("Answer is: " + ans)
         return
-    elif re.findall("^[13579]?5$", q) and mod2 == 0.0:
+    elif re.findall("^[13579]5$", q) and mod2 == 0.0:
         ans = (mod1 + 5) / 10 ** (length - (point + 1))
         ans = "{:.{}f}".format(ans, r)
         print("Answer is: " + ans)
